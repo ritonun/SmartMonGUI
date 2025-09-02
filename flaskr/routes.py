@@ -7,6 +7,8 @@ main = Blueprint('main', __name__)
 def index():
     if request.method == "POST":
         if "scan" in request.form:
-            get_devices()
+            devices = get_devices()
+            for device in devices:
+                print(f"Found {device}")
 
     return render_template("index.html")
