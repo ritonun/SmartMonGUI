@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, jsonify, request
-from .smart import get_smart_status, get_devices
+from .smart import get_devices
 
 main = Blueprint('main', __name__)
 
